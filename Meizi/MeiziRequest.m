@@ -30,6 +30,10 @@
 + (MeiziRequest *)requestWithPage:(NSInteger)page category:(MeiziCategory)category success:(void (^)(NSArray<Meizi *> *))success failure:(void (^)(NSString *))failure {
     MeiziRequest *request = [[MeiziRequest alloc] initWithPage:page category:category];
     [request startWithBlockSuccess:^(__kindof SYBaseRequest *request) {
+        //NSLog(@"    %@   ", request.responseHeader);
+        //NSLog(@"    %@   ", request.responseData);
+        //NSLog(@"    %@   ", request.responseString);
+        //NSLog(@"    %@   ", request.requestURLString);
         success?success(((MeiziRequest *)request).meiziArray):nil;
     } failure:^(__kindof SYBaseRequest *request, NSError *error) {
         failure?failure(error.localizedDescription):nil;
@@ -46,11 +50,13 @@
 }
 
 - (NSString *)baseURL {
-    return @"https://meizi.leanapp.cn";
+    //return @"https://meizi.leanapp.cn";
+    return @"https://mei12356.ml";
 }
 
 - (NSString *)requestPath {
     NSString *category = @"";
+    /*
     switch (self.category) {
         case MeiziCategoryAll:
             category = @"All";
@@ -78,6 +84,8 @@
             break;
     }
     return [NSString stringWithFormat:@"/category/%@/page/%@", category, @(self.page)];
+    */
+    return @"/idance";
 }
 
 - (NSArray<Meizi *> *)meiziArray {
