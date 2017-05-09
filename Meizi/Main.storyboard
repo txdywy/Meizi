@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--妹子-->
+        <!--舞💃-->
         <scene sceneID="gGw-zf-PUk">
             <objects>
                 <navigationController id="Ixr-ZN-jVk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="妹子" image="Home" id="kFR-bV-p5b"/>
+                    <tabBarItem key="tabBarItem" title="舞💃" image="Home" id="kFR-bV-p5b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="olh-jg-Mb1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
