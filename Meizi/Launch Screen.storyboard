@@ -22,29 +22,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="京城舞王" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksx-az-2Is">
-                                <rect key="frame" x="87" y="287" width="200" height="93"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-bK-UD9">
+                                <rect key="frame" x="47" y="28" width="280" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="251" id="67R-Ih-78n"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="京城舞王" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksx-az-2Is">
+                                <rect key="frame" x="93" y="423" width="189" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="f9f-ic-SSE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-bK-UD9">
-                                <rect key="frame" x="47" y="28" width="280" height="251"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="251" id="QZW-ZK-KRN"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fUD-bK-UD9" firstAttribute="top" secondItem="FMm-oZ-xad" secondAttribute="bottom" constant="8" id="0dX-mM-O0d"/>
-                            <constraint firstItem="Ksx-az-2Is" firstAttribute="top" secondItem="fUD-bK-UD9" secondAttribute="bottom" constant="8" symbolic="YES" id="A0l-Vc-Hzo"/>
-                            <constraint firstItem="Ksx-az-2Is" firstAttribute="leading" secondItem="uPm-5T-TfA" secondAttribute="leadingMargin" constant="68" id="Fjy-ID-cl0"/>
-                            <constraint firstItem="fUD-bK-UD9" firstAttribute="leading" secondItem="uPm-5T-TfA" secondAttribute="leadingMargin" constant="31" id="LvI-ro-FZa"/>
-                            <constraint firstItem="Ksx-az-2Is" firstAttribute="centerX" secondItem="uPm-5T-TfA" secondAttribute="centerX" id="WRX-QL-eZf"/>
-                            <constraint firstItem="QBi-7N-LzO" firstAttribute="top" secondItem="Ksx-az-2Is" secondAttribute="bottom" constant="304" id="arr-Ps-6b9"/>
-                            <constraint firstItem="Ksx-az-2Is" firstAttribute="top" secondItem="FMm-oZ-xad" secondAttribute="bottom" constant="250" id="hdd-kD-NXZ"/>
-                            <constraint firstItem="fUD-bK-UD9" firstAttribute="centerX" secondItem="Ksx-az-2Is" secondAttribute="centerX" id="ysx-Zl-4Pf"/>
+                            <constraint firstItem="fUD-bK-UD9" firstAttribute="centerX" secondItem="Ksx-az-2Is" secondAttribute="centerX" id="OVm-Po-fz2"/>
+                            <constraint firstItem="fUD-bK-UD9" firstAttribute="top" secondItem="FMm-oZ-xad" secondAttribute="bottom" constant="8" symbolic="YES" id="S1c-H1-lbH"/>
+                            <constraint firstItem="fUD-bK-UD9" firstAttribute="leading" secondItem="uPm-5T-TfA" secondAttribute="leadingMargin" constant="31" id="SC7-TE-anb"/>
+                            <constraint firstItem="QBi-7N-LzO" firstAttribute="top" secondItem="Ksx-az-2Is" secondAttribute="bottom" constant="151" id="Tfe-aS-bJ8"/>
+                            <constraint firstItem="fUD-bK-UD9" firstAttribute="centerX" secondItem="uPm-5T-TfA" secondAttribute="centerX" id="cmC-7F-jfg"/>
                         </constraints>
                     </view>
                 </viewController>
