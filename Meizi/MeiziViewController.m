@@ -20,6 +20,8 @@
 @property (nonatomic, assign) MeiziCategory category;
 @property (nonatomic, strong) NSMutableArray *meiziArray;
 @property (nonatomic, strong) GADBannerView *banner;
+@property (nonatomic, strong) GADInterstitial *interstitial;
+@property (nonatomic, assign) NSInteger counter;
 
 @end
 
@@ -40,7 +42,7 @@
     [super viewDidLoad];
     [self.collectionView.mj_header beginRefreshing];
     [self.navigationController setToolbarHidden:NO];
-    
+    self.interstitial = [self createAndLoadInterstitial];
     self.banner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
     self.banner.adUnitID = @"ca-app-pub-7366328858638561/4822998731";
     self.banner.rootViewController = self;
@@ -48,6 +50,27 @@
     [self.navigationController.toolbar addSubview:self.banner];
     [self.navigationController.toolbar sizeToFit];
     [self.banner loadRequest:[GADRequest request]];
+    [self showX];
+    self.counter = 0;
+}
+
+- (GADInterstitial *)createAndLoadInterstitial {
+    GADInterstitial *interstitial =
+    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7366328858638561/6299731937"];
+    interstitial.delegate = self;
+    [interstitial loadRequest:[GADRequest request]];
+    return interstitial;
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+    self.interstitial = [self createAndLoadInterstitial];
+}
+
+- (void)showX {
+    if (self.interstitial.isReady) {
+        [self.interstitial presentFromRootViewController:self];
+        self.interstitial = [self createAndLoadInterstitial];
+    }
 }
 
 #pragma mark - Orientation method
@@ -134,6 +157,10 @@
 }
 
 - (void)loadMoreMeizi {
+    self.counter += 1;
+    if (self.counter > 0 && self.counter % 5 == 0) {
+        [self showX];
+    }
     [MeiziRequest requestWithPage:self.page+1 category:self.category success:^(NSArray<Meizi *> *meiziArray) {
         [self.collectionView.mj_footer endRefreshing];
         [self reloadDataWithMeiziArray:meiziArray emptyBeforeReload:NO];
