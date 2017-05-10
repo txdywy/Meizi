@@ -12,12 +12,14 @@
 #import "MeiziCell.h"
 #import "Meizi.h"
 #import "AppDelegate.h"
+@import GoogleMobileAds;
 
 @interface MeiziViewController () <UICollectionViewDelegateFlowLayout, SYNavigationDropdownMenuDataSource, SYNavigationDropdownMenuDelegate>
 
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, assign) MeiziCategory category;
 @property (nonatomic, strong) NSMutableArray *meiziArray;
+@property (nonatomic, strong) GADBannerView *banner;
 
 @end
 
@@ -37,6 +39,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView.mj_header beginRefreshing];
+    [self.navigationController setToolbarHidden:NO];
+    
+    self.banner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    self.banner.adUnitID = @"ca-app-pub-7366328858638561/4822998731";
+    self.banner.rootViewController = self;
+    self.banner.center = CGPointMake(self.navigationController.toolbar.frame.size.width / 2, self.navigationController.toolbar.frame.size.height / 2 - 3);
+    [self.navigationController.toolbar addSubview:self.banner];
+    [self.navigationController.toolbar sizeToFit];
+    [self.banner loadRequest:[GADRequest request]];
 }
 
 #pragma mark - Orientation method

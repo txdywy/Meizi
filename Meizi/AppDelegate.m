@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SYNetwork.h"
+@import GoogleMobileAds;
 
 @implementation AppDelegate
 
@@ -18,6 +19,8 @@
     
     //Set SVProgressHUD
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-7366328858638561~3346265539"];
     
     return YES;
 }
