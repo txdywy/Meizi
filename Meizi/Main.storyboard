@@ -52,7 +52,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-5o-yFN">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍x10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-un-g9P">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-un-g9P">
                                             <rect key="frame" x="27" y="79" width="73" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.95686274510000002" green="0.8407936322158992" blue="0.37422434620239409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,6 +71,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="Hvi-5o-yFN" id="iwW-Et-89m"/>
+                                    <outlet property="zanLabel" destination="hW9-un-g9P" id="b8o-iZ-kUF"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
