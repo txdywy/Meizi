@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,10 +52,19 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-5o-yFN">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍x10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW9-un-g9P">
+                                            <rect key="frame" x="27" y="79" width="73" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.95686274510000002" green="0.8407936322158992" blue="0.37422434620239409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="hW9-un-g9P" firstAttribute="leading" secondItem="m8R-Ec-LuK" secondAttribute="leadingMargin" constant="19" id="EiQ-dr-Be7"/>
+                                    <constraint firstItem="hW9-un-g9P" firstAttribute="bottom" secondItem="Hvi-5o-yFN" secondAttribute="bottom" id="HrR-FN-5ws"/>
                                     <constraint firstAttribute="trailing" secondItem="Hvi-5o-yFN" secondAttribute="trailing" id="eWk-51-37P"/>
+                                    <constraint firstItem="hW9-un-g9P" firstAttribute="trailing" secondItem="Hvi-5o-yFN" secondAttribute="trailing" id="f6D-tl-oWf"/>
                                     <constraint firstAttribute="bottom" secondItem="Hvi-5o-yFN" secondAttribute="bottom" id="gwB-6m-1bb"/>
                                     <constraint firstItem="Hvi-5o-yFN" firstAttribute="leading" secondItem="m8R-Ec-LuK" secondAttribute="leading" id="jkt-h6-IGe"/>
                                     <constraint firstItem="Hvi-5o-yFN" firstAttribute="top" secondItem="m8R-Ec-LuK" secondAttribute="top" id="lej-Vv-Wxc"/>
@@ -73,7 +83,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rid-cu-B5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="1264"/>
+            <point key="canvasLocation" x="1149.5999999999999" y="1263.4182908545729"/>
         </scene>
         <!--设置-->
         <scene sceneID="7l6-d2-2qh">
