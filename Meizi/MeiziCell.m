@@ -8,6 +8,7 @@
 
 #import "MeiziCell.h"
 #import "Meizi.h"
+#import "MeiziViewController.h"
 
 @interface MeiziCell ()
 
@@ -36,13 +37,37 @@
 {
     NSLog(@"12321321");
     self.counter += 1;
+    [self star];
     NSString *zan = @"👍x";
     NSString *cnt = [NSString stringWithFormat: @"%ld", (long)self.counter];
     zan = [zan stringByAppendingString:cnt];
     self.zanLabel.text = zan;
     //[self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    UIImageView *clickedImageView = (UIImageView *)tapGestureRecognizer.view;
-    [self scanBigImageWithImageView:clickedImageView];
+    
+    double delayInSeconds = 1.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        //code to be executed on the main queue after delay
+        UIImageView *clickedImageView = (UIImageView *)tapGestureRecognizer.view;
+        [self scanBigImageWithImageView:clickedImageView];
+    });
+    
+}
+
+- (void)star {
+    MeiziViewController *mvc = (MeiziViewController *)[self viewController];
+    [mvc initStar];
+}
+
+- (UIViewController *)viewController {
+    UIResponder *responder = self;
+    while (![responder isKindOfClass:[UIViewController class]]) {
+        responder = [responder nextResponder];
+        if (nil == responder) {
+            break;
+        }
+    }
+    return (UIViewController *)responder;
 }
 
 static CGRect oldframe;

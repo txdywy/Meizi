@@ -10,5 +10,6 @@
 #import <SYPhotoBrowser/SYPhotoBrowser.h>
 
 @interface MeiziViewController : UICollectionViewController
-
+- (void)tapStar;
+- (void)initStar;
 @end

@@ -174,7 +174,7 @@
         [SVProgressHUD showErrorWithStatus:message];
         [self.collectionView.mj_header endRefreshing];
     }];
-    [self initStar];
+    [self tapStar];
 }
 
 - (void)loadMoreMeizi {
