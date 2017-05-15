@@ -27,7 +27,7 @@
     [self.imageView setImageWithURL:imageURL usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.counter = [meizi.like intValue];
     NSString *s = @"👍x";
-    self.zanLabel.text = [s stringByAppendingString: meizi.like];
+    self.zanLabel.text = s;//[s stringByAppendingString: meizi.like];
     self.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *pgr = [[UITapGestureRecognizer alloc]
                                      initWithTarget:self action:@selector(handleTap:)];
@@ -54,8 +54,30 @@
         UIImageView *clickedImageView = (UIImageView *)tapGestureRecognizer.view;
         [self scanBigImageWithImageView:clickedImageView];
     });
+    [self pin];
     
 }
+
+
+- (void)pin {
+    NSURL *url = [NSURL URLWithString:@"https://mei12356.ml/pin"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+    {
+        
+        
+        if (error)
+        {
+            //NSLog(@"Error,%@", [error localizedDescription]);
+        }
+        else
+        {
+            NSLog(@"=-=-=-=--=%@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
+        }
+    }];
+}
+
 
 - (void)star {
     MeiziViewController *mvc = (MeiziViewController *)[self viewController];
