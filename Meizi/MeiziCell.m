@@ -56,7 +56,7 @@
 
 - (void)star {
     MeiziViewController *mvc = (MeiziViewController *)[self viewController];
-    [mvc initStar];
+    [mvc tapStar];
 }
 
 - (UIViewController *)viewController {
