@@ -13,5 +13,7 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *thumb_url;
 @property (nonatomic, copy) NSString *image_url;
+@property (nonatomic, copy) NSString *like;
+@property (nonatomic, copy) NSString *id;
 
 @end
