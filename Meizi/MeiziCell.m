@@ -30,7 +30,7 @@
     self.id = meizi.id;
     NSString *s = @"👍x";
     //NSLog(@"%@", meizi.like);
-    self.zanLabel.text = [s stringByAppendingString: meizi.like];
+    self.zanLabel.text = [NSString stringWithFormat:@"%@%@", s, meizi.like];
     self.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *pgr = [[UITapGestureRecognizer alloc]
                                      initWithTarget:self action:@selector(handleTap:)];
