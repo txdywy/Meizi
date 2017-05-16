@@ -27,7 +27,8 @@
     [self.imageView setImageWithURL:imageURL usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.counter = [meizi.like intValue];
     NSString *s = @"👍x";
-    self.zanLabel.text = s;//[s stringByAppendingString: meizi.like];
+    //NSLog(@"%@", meizi.like);
+    self.zanLabel.text = [s stringByAppendingString: meizi.like];
     self.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *pgr = [[UITapGestureRecognizer alloc]
                                      initWithTarget:self action:@selector(handleTap:)];
