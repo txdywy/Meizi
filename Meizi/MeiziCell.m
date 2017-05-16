@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *zanLabel;
 @property (nonatomic, assign) NSInteger counter;
+@property (nonatomic, assign) NSString *id;
 
 @end
 
@@ -26,6 +27,7 @@
     NSURL *imageURL = [NSURL URLWithString:meizi.thumb_url];
     [self.imageView setImageWithURL:imageURL usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.counter = [meizi.like intValue];
+    self.id = meizi.id;
     NSString *s = @"👍x";
     //NSLog(@"%@", meizi.like);
     self.zanLabel.text = [s stringByAppendingString: meizi.like];
@@ -39,7 +41,7 @@
 
 - (void)handleTap:(UITapGestureRecognizer *)tapGestureRecognizer
 {
-    NSLog(@"12321321");
+    //NSLog(@"12321321");
     self.counter += 1;
     [self star];
     NSString *zan = @"👍x";
@@ -61,7 +63,9 @@
 
 
 - (void)pin {
-    NSURL *url = [NSURL URLWithString:@"https://mei12356.ml/pin"];
+    NSString *s = @"https://mei12356.ml/pin?id=";
+    s = [s stringByAppendingString: self.id];
+    NSURL *url = [NSURL URLWithString:s];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
