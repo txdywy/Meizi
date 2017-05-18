@@ -49,7 +49,7 @@
     zan = [zan stringByAppendingString:cnt];
     self.zanLabel.text = zan;
     //[self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    
+    /*
     double delayInSeconds = 1.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -57,6 +57,7 @@
         UIImageView *clickedImageView = (UIImageView *)tapGestureRecognizer.view;
         [self scanBigImageWithImageView:clickedImageView];
     });
+    */
     [self pin];
     
 }
