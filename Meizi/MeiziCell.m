@@ -11,6 +11,7 @@
 #import "MeiziViewController.h"
 
 @interface MeiziCell ()
+@property (weak, nonatomic) IBOutlet UIButton *viewButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *zanLabel;
@@ -22,6 +23,21 @@
 @implementation MeiziCell
 
 #pragma mark - Public method
+- (IBAction)tdViewButton:(id)sender {
+    NSLog(@"adsd2323");
+    self.viewButton.alpha = 1.0f;
+    [UIView animateWithDuration:0.3f
+                          delay:0.0f
+                        options:UIViewAnimationOptionAutoreverse
+                     animations:^ {
+                         [UIView setAnimationRepeatCount:3];
+                         self.viewButton.alpha = 0.4f;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
+    UIImageView *clickedImageView = (UIImageView *)self.imageView;
+    [self scanBigImageWithImageView:clickedImageView];
+}
 
 - (void)setMeizi:(Meizi *)meizi {
     NSURL *imageURL = [NSURL URLWithString:meizi.thumb_url];
@@ -43,6 +59,16 @@
 {
     //NSLog(@"12321321");
     self.counter += 1;
+    self.imageView.alpha = 1.0f;
+    [UIView animateWithDuration:0.3f
+                          delay:0.0f
+                        options:UIViewAnimationOptionAutoreverse
+                     animations:^ {
+                         [UIView setAnimationRepeatCount:3];
+                         self.imageView.alpha = 0.3f;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
     [self star];
     NSString *zan = @"👍x";
     NSString *cnt = [NSString stringWithFormat: @"%ld", (long)self.counter];
