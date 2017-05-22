@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3ACD7DD21EC94070009DAB96 /* AsteriskParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ACD7DD01EC94070009DAB96 /* AsteriskParticle.sks */; };
 		3ACD7DD31EC94070009DAB96 /* StarParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ACD7DD11EC94070009DAB96 /* StarParticle.sks */; };
+		3AEC8CC41ED29300007E6440 /* PasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC8CC01ED29300007E6440 /* PasterController.m */; };
+		3AEC8CC51ED29300007E6440 /* PasterChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC8CC21ED29300007E6440 /* PasterChooseView.m */; };
+		3AEC8CD01ED2946D007E6440 /* UIImage+AddFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC8CCF1ED2946D007E6440 /* UIImage+AddFunction.m */; };
+		3AEC8CD61ED29484007E6440 /* XTPasterStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC8CD31ED29484007E6440 /* XTPasterStageView.m */; };
+		3AEC8CD71ED29484007E6440 /* XTPasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC8CD51ED29484007E6440 /* XTPasterView.m */; };
+		3AEC8CD91ED2A732007E6440 /* PasterChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AEC8CD81ED2A732007E6440 /* PasterChooseView.xib */; };
 		3AF1829A1EC1B45600CD1486 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AF182991EC1B45600CD1486 /* GoogleService-Info.plist */; };
 		7D4375E21B54FB72001CEBC9 /* MeiziViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4375E11B54FB72001CEBC9 /* MeiziViewController.m */; };
 		7D4375E51B5508D3001CEBC9 /* MeiziRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4375E41B5508D3001CEBC9 /* MeiziRequest.m */; };
@@ -38,6 +44,17 @@
 /* Begin PBXFileReference section */
 		3ACD7DD01EC94070009DAB96 /* AsteriskParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AsteriskParticle.sks; sourceTree = "<group>"; };
 		3ACD7DD11EC94070009DAB96 /* StarParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarParticle.sks; sourceTree = "<group>"; };
+		3AEC8CBF1ED29300007E6440 /* PasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterController.h; sourceTree = "<group>"; };
+		3AEC8CC01ED29300007E6440 /* PasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasterController.m; sourceTree = "<group>"; };
+		3AEC8CC11ED29300007E6440 /* PasterChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterChooseView.h; sourceTree = "<group>"; };
+		3AEC8CC21ED29300007E6440 /* PasterChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasterChooseView.m; sourceTree = "<group>"; };
+		3AEC8CCE1ED2946D007E6440 /* UIImage+AddFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AddFunction.h"; sourceTree = "<group>"; };
+		3AEC8CCF1ED2946D007E6440 /* UIImage+AddFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AddFunction.m"; sourceTree = "<group>"; };
+		3AEC8CD21ED29484007E6440 /* XTPasterStageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPasterStageView.h; sourceTree = "<group>"; };
+		3AEC8CD31ED29484007E6440 /* XTPasterStageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPasterStageView.m; sourceTree = "<group>"; };
+		3AEC8CD41ED29484007E6440 /* XTPasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPasterView.h; sourceTree = "<group>"; };
+		3AEC8CD51ED29484007E6440 /* XTPasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPasterView.m; sourceTree = "<group>"; };
+		3AEC8CD81ED2A732007E6440 /* PasterChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasterChooseView.xib; sourceTree = "<group>"; };
 		3AF182991EC1B45600CD1486 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A4C5BD92C73BE61966DCAAD /* Pods-Meizi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meizi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meizi/Pods-Meizi.release.xcconfig"; sourceTree = "<group>"; };
 		7D4375E01B54FB72001CEBC9 /* MeiziViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeiziViewController.h; sourceTree = "<group>"; };
@@ -100,6 +117,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AEC8CCD1ED2945C007E6440 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3AEC8CCE1ED2946D007E6440 /* UIImage+AddFunction.h */,
+				3AEC8CCF1ED2946D007E6440 /* UIImage+AddFunction.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		3AEC8CD11ED29475007E6440 /* Paster */ = {
+			isa = PBXGroup;
+			children = (
+				3AEC8CD21ED29484007E6440 /* XTPasterStageView.h */,
+				3AEC8CD31ED29484007E6440 /* XTPasterStageView.m */,
+				3AEC8CD41ED29484007E6440 /* XTPasterView.h */,
+				3AEC8CD51ED29484007E6440 /* XTPasterView.m */,
+			);
+			name = Paster;
+			sourceTree = "<group>";
+		};
 		7D2221171C780A5C00309078 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,11 +258,18 @@
 		7D93B84B1ACFD7CF00453452 /* Meizi */ = {
 			isa = PBXGroup;
 			children = (
+				3AEC8CD11ED29475007E6440 /* Paster */,
+				3AEC8CCD1ED2945C007E6440 /* Util */,
 				7D93B8501ACFD7CF00453452 /* AppDelegate.h */,
 				7D93B8511ACFD7CF00453452 /* AppDelegate.m */,
 				3ACD7DD01EC94070009DAB96 /* AsteriskParticle.sks */,
 				3ACD7DD11EC94070009DAB96 /* StarParticle.sks */,
+				3AEC8CBF1ED29300007E6440 /* PasterController.h */,
+				3AEC8CC01ED29300007E6440 /* PasterController.m */,
+				3AEC8CC11ED29300007E6440 /* PasterChooseView.h */,
+				3AEC8CC21ED29300007E6440 /* PasterChooseView.m */,
 				3AF182991EC1B45600CD1486 /* GoogleService-Info.plist */,
+				3AEC8CD81ED2A732007E6440 /* PasterChooseView.xib */,
 				E32FE7C61CF5DA83004655AB /* Launch Screen.storyboard */,
 				7D8910AE1E174B1900C481F2 /* Main.storyboard */,
 				7D93B8591ACFD7CF00453452 /* Images.xcassets */,
@@ -357,6 +401,7 @@
 				3AF1829A1EC1B45600CD1486 /* GoogleService-Info.plist in Resources */,
 				E32FE7C71CF5DA83004655AB /* Launch Screen.storyboard in Resources */,
 				7D93B85A1ACFD7CF00453452 /* Images.xcassets in Resources */,
+				3AEC8CD91ED2A732007E6440 /* PasterChooseView.xib in Resources */,
 				3ACD7DD31EC94070009DAB96 /* StarParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,15 +469,20 @@
 				7D75F9921CAF5EFE00D703E3 /* SYChainRequest.m in Sources */,
 				7D75F98B1CAF5EFE00D703E3 /* SYNetworkUtil.m in Sources */,
 				7D4375E21B54FB72001CEBC9 /* MeiziViewController.m in Sources */,
+				3AEC8CD61ED29484007E6440 /* XTPasterStageView.m in Sources */,
 				7D93B8521ACFD7CF00453452 /* AppDelegate.m in Sources */,
 				7DEC22431E14C0640025EDB6 /* CacheSizeLabel.m in Sources */,
 				7D75F98D1CAF5EFE00D703E3 /* SYNetworkCacheManager.m in Sources */,
 				7D75F9931CAF5EFE00D703E3 /* SYChainRequestManager.m in Sources */,
+				3AEC8CC41ED29300007E6440 /* PasterController.m in Sources */,
+				3AEC8CC51ED29300007E6440 /* PasterChooseView.m in Sources */,
+				3AEC8CD71ED29484007E6440 /* XTPasterView.m in Sources */,
 				7D93B84F1ACFD7CF00453452 /* main.m in Sources */,
 				7D75F98E1CAF5EFE00D703E3 /* SYBaseRequest.m in Sources */,
 				7D75F9911CAF5EFE00D703E3 /* SYBatchRequestManager.m in Sources */,
 				7D4375E81B550BC6001CEBC9 /* MeiziCell.m in Sources */,
 				7D4375E51B5508D3001CEBC9 /* MeiziRequest.m in Sources */,
+				3AEC8CD01ED2946D007E6440 /* UIImage+AddFunction.m in Sources */,
 				7D8A0AA81B58B482001EDD42 /* SettingViewController.m in Sources */,
 				7D75F98C1CAF5EFE00D703E3 /* SYNetworkConfig.m in Sources */,
 			);

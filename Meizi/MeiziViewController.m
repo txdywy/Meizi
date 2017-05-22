@@ -13,7 +13,9 @@
 #import "Meizi.h"
 #import "AppDelegate.h"
 #import <SpriteKit/SpriteKit.h>
+#import "PasterController.h"
 @import GoogleMobileAds;
+
 
 #define SCREEN_SCALE [[UIScreen mainScreen] scale]
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
@@ -45,6 +47,25 @@
     }
     return self;
 }
+
+- (IBAction)stickerPressed:(id)sender {
+    [self performSegueWithIdentifier:@"2paster" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"2paster"])
+    {
+        PasterController *pasterCtrller = (PasterController *)[segue destinationViewController] ;
+        UIButton *btn = (UIButton *)sender;
+        MeiziCell *cell = (MeiziCell *)[btn superview];
+        pasterCtrller.imageWillHandle = cell.imageView;
+        pasterCtrller.delegate = self ;
+    }
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
