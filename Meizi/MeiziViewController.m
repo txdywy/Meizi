@@ -61,7 +61,7 @@
         PasterController *pasterCtrller = (PasterController *)[segue destinationViewController] ;
         UIButton *btn = (UIButton *)sender;
         MeiziCell *cell = (MeiziCell *)[btn superview];
-        pasterCtrller.imageWillHandle = cell.imageView;
+        pasterCtrller.imageWillHandle = cell.imageView.image;
         pasterCtrller.delegate = self ;
     }
 }
