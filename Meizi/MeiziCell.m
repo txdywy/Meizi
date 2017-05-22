@@ -13,7 +13,7 @@
 @interface MeiziCell ()
 @property (weak, nonatomic) IBOutlet UIButton *viewButton;
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+//@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *zanLabel;
 @property (nonatomic, assign) NSInteger counter;
 @property (nonatomic, assign) NSString *id;
