@@ -92,7 +92,7 @@ static const CGFloat width_pasterChoose = 110.0f ;
     CGRect rectImage = CGRectZero ;
     CGFloat length = APPFRAME.size.width - sideFlex * 2 ;
     rectImage.size = CGSizeMake(length, length) ;
-    CGFloat y = (APPFRAME.size.height - self.scrollPaster.frame.size.height - length) ;
+    CGFloat y = (APPFRAME.size.height - self.scrollPaster.frame.size.height - length*1.1) ;
     rectImage.origin.x = sideFlex ;
     rectImage.origin.y = y ;
     
@@ -125,8 +125,7 @@ static const CGFloat width_pasterChoose = 110.0f ;
     _scrollPaster.showsVerticalScrollIndicator = NO ;
     _scrollPaster.showsHorizontalScrollIndicator = NO ;
     _scrollPaster.bounces = YES ;
-    _scrollPaster.contentSize = CGSizeMake(width_pasterChoose * self.pasterList.count,
-                                           self.scrollPaster.frame.size.height) ;
+    _scrollPaster.contentSize = CGSizeMake(width_pasterChoose * self.pasterList.count, 0) ;
     
     int _x = 0 ;
     
