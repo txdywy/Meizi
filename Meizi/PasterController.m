@@ -42,7 +42,7 @@ static const CGFloat width_pasterChoose = 110.0f ;
 {
     if (!_pasterList)
     {
-        _pasterList = @[@"1",@"2",@"3",@"4",@"5"] ;
+        _pasterList = @[@"00",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12"] ;
     }
     
     return _pasterList ;
