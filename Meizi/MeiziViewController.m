@@ -49,7 +49,7 @@
 }
 
 - (IBAction)stickerPressed:(id)sender {
-    [self performSegueWithIdentifier:@"2paster" sender:nil];
+    [self performSegueWithIdentifier:@"2paster" sender:sender];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -60,7 +60,7 @@
     {
         PasterController *pasterCtrller = (PasterController *)[segue destinationViewController] ;
         UIButton *btn = (UIButton *)sender;
-        MeiziCell *cell = (MeiziCell *)[btn superview];
+        MeiziCell *cell = (MeiziCell *)btn.superview.superview;
         pasterCtrller.imageWillHandle = cell.imageView.image;
         pasterCtrller.delegate = self ;
     }
