@@ -48,17 +48,40 @@ static const CGFloat width_pasterChoose = 110.0f ;
     return _pasterList ;
 }
 
+/*
 #pragma mark - Actions
 - (IBAction)backButtonClickedAction:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES] ;
 }
+ */
 
 - (IBAction)nextButtonClickedAction:(id)sender
 {
     UIImage *imgResult = [_stageView doneEdit] ;
-    [self.delegate pasterAddFinished:imgResult] ;
-    [self.navigationController popViewControllerAnimated:YES] ;
+    [self pasterAddFinished:imgResult] ;
+    //[self.navigationController popViewControllerAnimated:NO] ;
+}
+
+#pragma mark -- PasterCtrllerDelegate <NSObject>
+- (void)pasterAddFinished:(UIImage *)imageFinished
+{
+    UIImageWriteToSavedPhotosAlbum(imageFinished, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+}
+
+- (void)image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo
+{
+    NSString *msg = nil ;
+    if(error != NULL){
+        msg = @"失败🍉" ;
+    }else{
+        msg = @"成功🍑" ;
+    }
+    
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"📱保存图片📷" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alert show];
+
+    
 }
 
 #pragma mark - Life cycle

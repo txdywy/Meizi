@@ -224,20 +224,6 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dC-F0-D2P" userLabel="topBar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV9-NS-mHJ">
-                                        <rect key="frame" x="8" y="7" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="Mqh-QF-Ldx"/>
-                                            <constraint firstAttribute="height" constant="30" id="bSW-Tn-TWs"/>
-                                        </constraints>
-                                        <state key="normal" title="返回">
-                                            <color key="titleColor" red="0.79215686269999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="backButtonClickedAction:" destination="deD-Rl-jxw" eventType="touchUpInside" id="FNp-Qx-Lqb"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QZ-px-oyz">
                                         <rect key="frame" x="321" y="7" width="46" height="30"/>
                                         <constraints>
@@ -252,30 +238,16 @@
                                             <action selector="nextButtonClickedAction:" destination="deD-Rl-jxw" eventType="touchUpInside" id="WFN-K3-hk7"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghA-hx-534">
-                                        <rect key="frame" x="157" y="11" width="61" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="Tpq-Gb-cHb"/>
-                                            <constraint firstAttribute="width" constant="61" id="urv-tn-qJr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.79215686269999996" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="ghA-hx-534" secondAttribute="centerX" id="EWT-pj-6OP"/>
                                     <constraint firstAttribute="trailing" secondItem="0QZ-px-oyz" secondAttribute="trailing" constant="8" id="F7X-eT-xfF"/>
-                                    <constraint firstItem="TV9-NS-mHJ" firstAttribute="leading" secondItem="3dC-F0-D2P" secondAttribute="leading" constant="8" id="M1K-Mt-RKf"/>
                                     <constraint firstAttribute="height" constant="44" id="h10-Lc-YX8"/>
                                     <constraint firstItem="0QZ-px-oyz" firstAttribute="top" secondItem="3dC-F0-D2P" secondAttribute="top" constant="7" id="jcL-0b-0p2"/>
-                                    <constraint firstItem="TV9-NS-mHJ" firstAttribute="top" secondItem="3dC-F0-D2P" secondAttribute="top" constant="7" id="lOy-ed-E6s"/>
-                                    <constraint firstItem="ghA-hx-534" firstAttribute="top" secondItem="3dC-F0-D2P" secondAttribute="top" constant="11" id="nya-Qv-w36"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IZ-t9-VIl" userLabel="bottomView">
-                                <rect key="frame" x="0.0" y="490" width="375" height="177"/>
+                                <rect key="frame" x="0.0" y="441" width="375" height="177"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CqC-R0-DWt">
                                         <rect key="frame" x="5" y="0.0" width="365" height="177"/>
