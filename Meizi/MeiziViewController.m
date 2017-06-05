@@ -73,7 +73,7 @@
     [self.navigationController setToolbarHidden:NO];
     self.interstitial = [self createAndLoadInterstitial];
     self.banner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-    self.banner.adUnitID = @"ca-app-pub-7366328858638561/4822998731";
+    self.banner.adUnitID = @"ca-app-pub-9941563777656289/7691732854";
     self.banner.rootViewController = self;
     self.banner.center = CGPointMake(self.navigationController.toolbar.frame.size.width / 2, self.navigationController.toolbar.frame.size.height / 2 - 3);
     [self.navigationController.toolbar addSubview:self.banner];
@@ -86,7 +86,7 @@
 
 - (GADInterstitial *)createAndLoadInterstitial {
     GADInterstitial *interstitial =
-    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7366328858638561/6299731937"];
+    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-9941563777656289/9168466052"];
     interstitial.delegate = self;
     [interstitial loadRequest:[GADRequest request]];
     return interstitial;
